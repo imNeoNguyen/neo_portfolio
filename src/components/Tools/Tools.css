@@ -1,0 +1,31 @@
+.tools{
+    padding: 0 !important;
+}
+
+.tools-container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 6rem;
+}
+
+.tools-container img{
+    transition: var(--transition);
+}
+
+.tools-container img:hover{
+    transform: rotate(-45deg);
+}
+
+/* ------------------ MAX-WIDTH : 1024px ---------------- */
+@media (max-width:1024px) {
+    .tools-container{
+        gap: 4rem;
+    }
+}
+
+/* ------------------ MAX-WIDTH : 600px ---------------- */
+@media (max-width:600px) {
+    .tools-container{
+        gap: 1.5rem;
+    }
+}

@@ -1,0 +1,33 @@
+.About{
+    padding-bottom: 0 !important;
+}
+
+.about-container{
+    display: grid;
+    grid-template-columns: 52% auto;
+    gap: 3rem;
+}
+
+.about-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* ------------------ MAX-WIDTH : 1024px ---------------- */
+@media (max-width:1024px) {
+    .about-container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .about-right{
+        grid-row: 1;
+    }
+}
+
+/* ------------------ MAX-WIDTH : 600px ---------------- */
+@media (max-width:600px) {
+    .about-right{
+        gap: 1rem;
+    }
+}
