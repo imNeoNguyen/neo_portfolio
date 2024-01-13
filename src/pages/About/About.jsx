@@ -1,18 +1,18 @@
-import './About.css'
-import CV from '../../assets/CV.pdf'
+import "./About.css";
+import CV from "../../assets/CV.pdf";
 
 //FontAwesome Import
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 //Data Import
-import {experience} from '../../data/Data'
+import { experience } from "../../data/Data";
 
 //Components Import
-import HeadingText from '../../components/HeadingText/HeadingText'
-import Card from '../../UI/Card'
-import Tools from '../../components/Tools/Tools'
-import Service from '../../components/Services/Services'
+import HeadingText from "../../components/HeadingText/HeadingText";
+import Card from "../../UI/Card";
+import Tools from "../../components/Tools/Tools";
+import Service from "../../components/Services/Services";
 
 export default function About() {
   return (
@@ -23,38 +23,47 @@ export default function About() {
           <div className="about-left">
             <h3>Im Neo Nguyen</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit qui
-              ab debitis nesciunt assumenda maxime eos quidem reprehenderit
-              porro dolorum sint, exercitationem molestiae, fugit rerum
-              suscipit, nobis aliquid sequi nihil.
-            </p>
+              Welcome to my "About Me" page! I have a habit of continuously
+              pursuing creativity and challenging myself. With a background
+              in programming and design, I am not only passionate about my work
+              but also always seeking opportunities to expand my knowledge and
+              skills.
+            </p>{" "}
+            <br />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-              laborum facere dicta debitis eius eligendi quas iusto autem.
-              Accusantium ea natus harum accusamus rerum? Quae accusantium vero
-              laborum esse minima!
+              I believe that technology can bring about positive changes in the
+              world, and that's my biggest motivation.
+            </p>{" "}
+            <br />
+            <p>
+              Outside of work, I have a passion for painting, long-distance
+              travel, mountain climbing, and playing games with friends. I
+              continuously strive to infuse creativity and passion into every
+              aspect of life. I hope this portfolio website serves as a gateway
+              for you to get to know me better. Thank you for stopping by!
             </p>
             <a href={CV} download className="btn">
-              Download CV <span><FontAwesomeIcon icon={faDownload}/></span>
+              Download CV{" "}
+              <span>
+                <FontAwesomeIcon icon={faDownload} />
+              </span>
             </a>
           </div>
 
           <div className="about-right">
-            {
-              experience.map(({id, no, title})=>{
-                return(
-                  <Card key={id} classname={'experience-card'}>
-                    <h1><span>{no}</span></h1>
-                    <p>{title}</p>
-                  </Card>
-                )
-              })
-            }
+            {experience.map(({ id, no, title }) => {
+              return (
+                <Card key={id} classname={"experience-card"}>
+                  <h1>
+                    <span>{no}</span>
+                  </h1>
+                  <p>{title}</p>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
-      <br />
-      <br />
       <br />
       <br />
       <br />
