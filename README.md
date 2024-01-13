@@ -13,3 +13,4 @@ Welcome to Neo's Portfolio Website!
 Simplicity meets creativity in Neo's portfolio. Explore, engage, and get in touch!
 
 <img src="/src/assets/demo.png" width="1200" alt="" />
+
