@@ -1,8 +1,15 @@
-# React + Vite
+# Neo Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Neo's Portfolio Website!
 
-Currently, two official plugins are available:
+- Home: Your gateway to Neo's world! Discover a brief introduction and navigate to other sections.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- About: Get to know Neo better! Explore personal and professional insights, passions, and experiences.
+
+- Portfolio: Dive into Neo's showcase! Browse through a curated collection of projects highlighting skills and expertise.
+
+- Contact: Let's connect! Find Neo's contact details and reach out for collaborations or inquiries.
+
+Simplicity meets creativity in Neo's portfolio. Explore, engage, and get in touch!
+
+<img src="/src/assets/demo.png" width="1200" alt="" />
