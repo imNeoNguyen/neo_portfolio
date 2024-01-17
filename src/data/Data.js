@@ -116,7 +116,7 @@ export const portfolio = [
         img: protfoliImg1,
         name: 'Home180',
         des: 'Welcome to Home 180, where finding your perfect rental is simplified. We have streamlined the process to make renting houses and apartments easy for both tenants and landlords.',
-        github:'https://github.com/diemquynhNT/QuanLyThueTro',
+        github:'https://github.com/NeoNeoNguyen/Website-Home180',
     },
     {
         id: 1,

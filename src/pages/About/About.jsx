@@ -1,5 +1,5 @@
 import "./About.css";
-import CV from "../../assets/CV.pdf";
+import CV from "../../assets/CV-NguyenThiKimNgan-InternDeveloper.pdf";
 
 //FontAwesome Import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
