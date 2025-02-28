@@ -1,4 +1,4 @@
-.About{
+/* .About{
     padding-bottom: 0 !important;
 }
 
@@ -15,7 +15,7 @@
 }
 
 /* ------------------ MAX-WIDTH : 1024px ---------------- */
-@media (max-width:1024px) {
+/* @media (max-width:1024px) {
     .about-container{
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -23,11 +23,127 @@
     .about-right{
         grid-row: 1;
     }
+} */
+
+/* ------------------ MAX-WIDTH : 600px ---------------- */
+/* @media (max-width:600px) {
+    .about-right{
+        gap: 1rem;
+    }
+}  */
+
+.About {
+    padding-bottom: 0 !important;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-left h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-left p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about-left .btn {
+    align-self: start;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.about-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.experience-card {
+    padding: 1.5rem;
+    border: 1px solid var(--color-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.experience-card h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-card p {
+    font-size: 1.1rem;
+}
+
+/* ------------------ MAX-WIDTH : 1024px ---------------- */
+@media (max-width: 1024px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .about-right {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ------------------ MAX-WIDTH : 768px ---------------- */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .about-right {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .about-left h3 {
+        font-size: 1.8rem;
+    }
+    .about-left p {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 10px 50px 10px 25px;
+    }
+    .btn span {
+        width: 40px;
+    }
 }
 
 /* ------------------ MAX-WIDTH : 600px ---------------- */
-@media (max-width:600px) {
-    .about-right{
+@media (max-width: 600px) {
+    .about-container {
+        grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    .about-right {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .about-left h3 {
+        font-size: 1.6rem;
+    }
+    .about-left p {
+        font-size: 0.9rem;
+    }
+    .btn {
+        padding: 8px 40px 8px 20px;
+    }
+    .btn span {
+        width: 35px;
     }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "./About.css";
 import CV from "../../assets/CV-NguyenThiKimNgan-InternDeveloper.pdf";
 
@@ -21,20 +22,18 @@ export default function About() {
         <HeadingText title={"About"} titlePrimary={"Me"} />
         <div className="container about-container">
           <div className="about-left">
-            <h3>Im Neo Nguyen</h3>
+            <h3>I'm Neo Nguyen</h3>
             <p>
               Welcome to my "About Me" page! I have a habit of continuously
               pursuing creativity and challenging myself. With a background
               in programming and design, I am not only passionate about my work
               but also always seeking opportunities to expand my knowledge and
               skills.
-            </p>{" "}
-            <br />
+            </p>
             <p>
               I believe that technology can bring about positive changes in the
               world, and that's my biggest motivation.
-            </p>{" "}
-            <br />
+            </p>
             <p>
               Outside of work, I have a passion for painting, long-distance
               travel, mountain climbing, and playing games with friends. I
@@ -64,9 +63,6 @@ export default function About() {
           </div>
         </div>
       </section>
-      <br />
-      <br />
-      <br />
       <Tools />
       <Service />
     </>

@@ -92,7 +92,7 @@ export const services = [
     },
     {
         id: 2,
-        icon: faCodeBranch, 
+        icon: faCodeBranch,     
         name:'Apps Development',
         des:'Utilizing Java for Android app development. Familiarity with cross-platform frameworks like Flutter and React Native.'
     },
@@ -129,6 +129,27 @@ export const portfolio = [
         id: 1,
         img: protfoliImg3,
         name: 'Game2D MonsterShooter',
+        des: 'A lively 2D game where you become a fearless monster hunter. Dive into a world of quirky monsters, armed with powerful weapons, and embark on a mission to save the day.',
+        github:'https://github.com/NeoNeoNguyen/Game2D_MonsterShooter',
+    },
+    {
+        id: 1,
+        img: protfoliImg1,
+        name: 'Hera',
+        des: 'Welcome to Home 180, where finding your perfect rental is simplified. We have streamlined the process to make renting houses and apartments easy for both tenants and landlords.',
+        github:'https://github.com/NeoNeoNguyen/Website-Home180',
+    },
+    {
+        id: 1,
+        img: protfoliImg2,
+        name: 'Repeat',
+        des: 'BookingFlights takes the hassle out of booking flights, making your travel experience quick and straightforward. where your next adventure is just a click away. Start your journey today!',
+        github:'https://github.com/NeoNeoNguyen/BookingFlights-MVC',
+    },
+    {
+        id: 1,
+        img: protfoliImg3,
+        name: 'Cua Viet',
         des: 'A lively 2D game where you become a fearless monster hunter. Dive into a world of quirky monsters, armed with powerful weapons, and embark on a mission to save the day.',
         github:'https://github.com/NeoNeoNguyen/Game2D_MonsterShooter',
     },

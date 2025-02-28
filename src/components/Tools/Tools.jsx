@@ -13,9 +13,9 @@ export default function Tools() {
 
         <div className="container tools-container">
             {
-            tools.map(({id, img})=>{
-                return(
-                   <img src={img} key={id}/> 
+            tools.map(({id, img}) => {
+                return (
+                   <img src={img} key={id} alt={`Tool ${id}`} /> 
                 )
             })
             }
