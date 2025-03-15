@@ -107,83 +107,54 @@ export const services = [
 
 
 
-import protfoliImg1 from '../../src/assets/p01.jpg'
-import protfoliImg2 from '../../src/assets/p02.jpg'
-import protfoliImg3 from '../../src/assets/p03.jpg'
+import portfolioImg1 from '../../src/assets/p01.jpg';
+import portfolioImg2 from '../../src/assets/p02.jpg';
+import portfolioImg3 from '../../src/assets/p03.jpg';
+
 export const portfolio = [
     {
         id: 1,
-        img: protfoliImg1,
+        img: portfolioImg1,
         name: 'Home180',
-        des: 'Welcome to Home 180, where finding your perfect rental is simplified. We have streamlined the process to make renting houses and apartments easy for both tenants and landlords.',
-        github:'https://github.com/NeoNeoNguyen/Website-Home180',
+        des: 'A rental platform that makes it easier for landlords and tenants to connect.',
+        github: 'https://github.com/NeoNeoNguyen/Website-Home180',
     },
     {
-        id: 1,
-        img: protfoliImg2,
+        id: 2,
+        img: portfolioImg2,
         name: 'BookingFlights',
-        des: 'BookingFlights takes the hassle out of booking flights, making your travel experience quick and straightforward. where your next adventure is just a click away. Start your journey today!',
-        github:'https://github.com/NeoNeoNguyen/BookingFlights-MVC',
+        des: 'A smooth and efficient flight booking system to make your travel hassle-free.',
+        github: 'https://github.com/NeoNeoNguyen/BookingFlights-MVC',
     },
     {
-        id: 1,
-        img: protfoliImg3,
-        name: 'Game2D MonsterShooter',
-        des: 'A lively 2D game where you become a fearless monster hunter. Dive into a world of quirky monsters, armed with powerful weapons, and embark on a mission to save the day.',
-        github:'https://github.com/NeoNeoNguyen/Game2D_MonsterShooter',
+        id: 3,
+        img: portfolioImg3,
+        name: 'Monster Shooter 2D',
+        des: 'A fun and exciting 2D shooter game where you hunt down monsters!',
+        github: 'https://github.com/NeoNeoNguyen/Game2D_MonsterShooter',
     },
     {
-        id: 1,
-        img: protfoliImg1,
-        name: 'Hera',
-        des: 'Welcome to Home 180, where finding your perfect rental is simplified. We have streamlined the process to make renting houses and apartments easy for both tenants and landlords.',
-        github:'https://github.com/NeoNeoNguyen/Website-Home180',
+        id: 4,
+        img: portfolioImg1,
+        name: 'Hera E-commerce',
+        des: 'An online shopping platform that provides an intuitive and seamless experience.',
+        github: 'https://github.com/NeoNeoNguyen/Website-Home180',
     },
     {
-        id: 1,
-        img: protfoliImg2,
-        name: 'Repeat',
-        des: 'BookingFlights takes the hassle out of booking flights, making your travel experience quick and straightforward. where your next adventure is just a click away. Start your journey today!',
-        github:'https://github.com/NeoNeoNguyen/BookingFlights-MVC',
+        id: 5,
+        img: portfolioImg2,
+        name: 'Repeat App',
+        des: 'A productivity app designed to help users build better habits through repetition.',
+        github: 'https://github.com/NeoNeoNguyen/BookingFlights-MVC',
     },
     {
-        id: 1,
-        img: protfoliImg3,
-        name: 'Cua Viet',
-        des: 'A lively 2D game where you become a fearless monster hunter. Dive into a world of quirky monsters, armed with powerful weapons, and embark on a mission to save the day.',
-        github:'https://github.com/NeoNeoNguyen/Game2D_MonsterShooter',
+        id: 6,
+        img: portfolioImg3,
+        name: 'Cua Viet Resort',
+        des: 'A website showcasing the beautiful beachside resort with online booking options.',
+        github: 'https://github.com/NeoNeoNguyen/Game2D_MonsterShooter',
     },
 ];
 
 
 
-// import avatar1 from '../../src/assets/avatar1.png'
-// import avatar2 from '../../src/assets/avatar2.png'
-// import avatar3 from '../../src/assets/avatar3.png'
-// import avatar4 from '../../src/assets/avatar4.png'
-// export const testimonials = [
-//     {
-//         id: 1,
-//         img: avatar1,
-//         name: 'Dong Lee',
-//         des: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione officiis iusto nulla exercitationem architecto sunt sint quis ipsam odio neque.',        
-//     },
-//     {
-//         id: 2,
-//         img: avatar2,
-//         name: 'Mohammed Habib',
-//         des: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione officiis iusto nulla exercitationem architecto sunt sint quis ipsam odio neque.',        
-//     },
-//     {
-//         id: 3,
-//         img: avatar3,
-//         name: 'Jhon Alas',
-//         des: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione officiis iusto nulla exercitationem architecto sunt sint quis ipsam odio neque.',        
-//     },
-//     {
-//         id: 4,
-//         img: avatar4,
-//         name: 'Irfan Nazir',
-//         des: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione officiis iusto nulla exercitationem architecto sunt sint quis ipsam odio neque.',        
-//     },
-// ];

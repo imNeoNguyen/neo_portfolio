@@ -1,43 +1,61 @@
 .tools {
-    padding: 0 !important;
+    margin-top: 6rem; /* Đảm bảo khoảng cách với phần trên */
+    text-align: center;
+    padding: 0;
 }
 
 .tools-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2.5rem;
+    justify-content: center;
+    padding: 2rem 1rem; /* Thêm padding để tránh chồng vào phần trên */
 }
 
-.tools-container img {
-    transition: var(--transition);
-    width: 100px;
-    height: 100px;
+.tool-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tools-container img:hover {
-    transform: rotate(-45deg);
+.tool-card img {
+    transition: transform 0.3s ease;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
-/* ------------------ MAX-WIDTH : 1024px ---------------- */
+.tool-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
     .tools-container {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 2rem;
     }
 }
 
-/* ------------------ MAX-WIDTH : 768px ---------------- */
 @media (max-width: 768px) {
+    .tools {
+        margin-top: 8rem; /* Tăng khoảng cách với phần trên khi thu nhỏ */
+    }
     .tools-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 1.5rem;
     }
 }
 
-/* ------------------ MAX-WIDTH : 600px ---------------- */
 @media (max-width: 600px) {
     .tools-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
     }
 }

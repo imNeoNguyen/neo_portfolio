@@ -1,20 +1,156 @@
-.Bg-toggler{
-    background: var(--color-right);
-    height: 2.8rem;
-    width: 2.8rem;
+/* Light Mode (Mặc định) */
+.light-theme {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --card-background: #ffffff;
+    --card-border-color: #ffffff;
+    --card-text-color: #000000;
+    --icon-color: #000000;
+}
+
+/* Dark Mode */
+.dark-theme {
+    --background-color: #2f2f2f;
+    --text-color: #ffffff;
+    --card-background: #4c4c4c;
+    --card-border-color: #ffffff;
+    --card-text-color: #ffffff;
+    --icon-color: #ffffff;
+}
+
+/* 🖥️ Toàn bộ trang */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 🗂️ Experience Card Container */
+.experience-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* 🏆 Experience Card */
+.experience-card {
+    background: var(--card-background);
+    border: 2px solid var(--card-border-color);
+    color: var(--card-text-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Điều chỉnh màu chữ trong Experience Card */
+.experience-card h3,
+.experience-card p {
+    color: var(--card-text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+/* 🌙🌞 Nút Toggle */
+.theme-toggler {
+    background: var(--card-border-color);
+    border: none;
+    outline: none;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
     border-radius: 50%;
     position: fixed;
-    bottom: 3%;
-    right: 3%;
+    bottom: 4%;
+    right: 4%;
+    cursor: pointer;
     z-index: 100;
-    transition: var(--transition);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    color: var(--icon-color);
 }
 
-.Bg-toggler:hover{
-    background: var(--color-primary);
-    color: white;
+/* Hover */
+.theme-toggler:hover {
+    background: var(--text-color);
+    color: var(--background-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Khi ở Dark Mode */
+.theme-toggler.dark-theme {
+    background: var(--card-background);
+    color: var(--icon-color);
+}
+
+/* Khi ở Light Mode */
+.theme-toggler.light-theme {
+    background: var(--card-border-color);
+    color: var(--icon-color);
+}
+
+/* Hiệu ứng đổi icon */
+.icon {
+    font-size: 1.5rem;
+    position: absolute;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.sun {
+    color: #ffcc00;
+}
+
+.moon {
+    color: #ffffff;
+}
+
+/* Hiển thị icon đúng mode */
+.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 🖥️ Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .experience-card {
+        width: 220px;
+    }
+
+    .Bg-toggler {
+        bottom: 5%;
+        right: 5%;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-card {
+        width: 90%;
+    }
+
+    .Bg-toggler {
+        bottom: 7%;
+        right: 7%;
+        height: 2.3rem;
+        width: 2.3rem;
+    }
 }

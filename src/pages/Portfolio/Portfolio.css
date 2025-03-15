@@ -1,49 +1,96 @@
-.portfolio{
-    padding-bottom: 0;
+.portfolio {
+    padding-bottom: 4rem; /* Tạo khoảng cách dưới cùng */
 }
 
-.portfolio-container{
+.portfolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    margin-bottom: 4rem; /* Khoảng cách dưới cùng của grid */
 }
 
-.project{
+.project {
     display: flex;
     flex-direction: column;
     gap: .7rem;
     transition: var(--transition);
 }
 
-.project img{
+.project img {
     border-radius: 1rem;
     border: 1px solid var(--color-dark);
+    width: 100%; /* Đảm bảo hình ảnh luôn vừa khung */
+    height: auto;
 }
 
-.project a{
+.project a {
     color: var(--color-primary);
 }
 
-.project:hover{
+.project:hover {
     background: var(--color-primary);
     color: var(--color-white);
 }
 
-.project:hover h3, .project:hover a{
+.project:hover h3, 
+.project:hover a {
     color: var(--color-white);
 }
 
-/* ------------------ MAX-WIDTH : 1024px ---------------- */
-@media (max-width:1024px) {
-    .portfolio-container{
-        grid-template-columns: 1fr 1fr;
+/* ------------------ MAX-WIDTH : 1200px (Tablet ngang & Laptop nhỏ) ---------------- */
+@media (max-width: 1200px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
-/* ------------------ MAX-WIDTH : 600px ---------------- */
-@media (max-width:600px) {
-    .portfolio-container{
+/* ------------------ MAX-WIDTH : 1024px (Tablet dọc) ---------------- */
+@media (max-width: 1024px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ------------------ MAX-WIDTH : 768px (Máy tính bảng nhỏ) ---------------- */
+@media (max-width: 768px) {
+    .portfolio-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+    
+    .project {
+        padding: 1rem;
+    }
+}
+
+/* ------------------ MAX-WIDTH : 480px (Điện thoại lớn) ---------------- */
+@media (max-width: 480px) {
+    .portfolio {
+        padding-bottom: 2rem; /* Giảm padding trên màn hình nhỏ */
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .project {
+        padding: 0.8rem;
+    }
+    
+    .project img {
+        border-radius: 0.5rem;
+    }
+}
+
+/* ------------------ MAX-WIDTH : 360px (Điện thoại nhỏ) ---------------- */
+@media (max-width: 360px) {
+    .portfolio-container {
+        gap: 0.5rem;
+    }
+    
+    .project {
+        padding: 0.5rem;
     }
 }

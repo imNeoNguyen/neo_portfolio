@@ -16,8 +16,8 @@ export default function Contact() {
           <div className="container contact-container">
             <form action="#">
               <input type="text" required placeholder="Your Name" />
-              <input type="email" required placeholder="Your Email" />
-              <input type="number" required placeholder="Your Number" />
+              <input type="email" required placeholder="Email" />
+              <input type="number" required placeholder="Phone number" />
               <textarea
                 name="message"
                 id="message"
@@ -25,10 +25,7 @@ export default function Contact() {
                 placeholder="Your Message"
               ></textarea>
               <button type="submit" className="btn">
-                Send
-                <span>
-                  <FontAwesomeIcon icon={faPaperPlane} />
-                </span>
+                Send <FontAwesomeIcon icon={faPaperPlane} />
               </button>
             </form>
           </div>
