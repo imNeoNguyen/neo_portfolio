@@ -1,41 +1,81 @@
+.detail-btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .detail-btn:hover {
+    background-color: #dbd300;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
 .portfolio {
-    padding-bottom: 4rem; /* Tạo khoảng cách dưới cùng */
+    padding: 4rem 2rem;
 }
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 4rem; /* Khoảng cách dưới cùng của grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.project {
-    display: flex;
-    flex-direction: column;
-    gap: .7rem;
-    transition: var(--transition);
+.portfolio-year {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
-.project img {
-    border-radius: 1rem;
-    border: 1px solid var(--color-dark);
-    width: 100%; /* Đảm bảo hình ảnh luôn vừa khung */
-    height: auto;
-}
-
-.project a {
-    color: var(--color-primary);
-}
-
-.project:hover {
+.portfolio-year::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
     background: var(--color-primary);
-    color: var(--color-white);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
 }
 
-.project:hover h3, 
-.project:hover a {
-    color: var(--color-white);
-}
 
 /* ------------------ MAX-WIDTH : 1200px (Tablet ngang & Laptop nhỏ) ---------------- */
 @media (max-width: 1200px) {
@@ -67,7 +107,7 @@
 /* ------------------ MAX-WIDTH : 480px (Điện thoại lớn) ---------------- */
 @media (max-width: 480px) {
     .portfolio {
-        padding-bottom: 2rem; /* Giảm padding trên màn hình nhỏ */
+        padding-bottom: 2rem;
     }
 
     .portfolio-container {

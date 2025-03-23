@@ -18,13 +18,13 @@ export default function About() {
         <div className="about-content">
           <h2>I'm Neo Nguyen</h2>
           <p>
-            Passionate developer and designer, continuously challenging myself with creativity. I specialize in building modern, user-friendly applications.
+            I'm a Mobile Developer and UX/UI Designer with a passion for creativity and technology.
           </p>
           <p>
-            Technology is my tool to create positive impacts, and I strive to bring innovation to every project I work on.
+            In this fast-evolving digital era, AI has become a powerful tool that helps me learn and grow from anywhere. I love using it to expand my knowledge and refine my skills.
           </p>
           <p>
-            When I'm not coding, you’ll find me painting, exploring nature, or gaming with friends. Welcome to my world!
+            Excited to be part of this journey!
           </p>
           <a href={CV} download className="btn">
             <FontAwesomeIcon icon={faDownload} />

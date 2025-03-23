@@ -56,7 +56,7 @@ header {
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s ease;
-    gap: 8px; /* Giữ khoảng cách giữa text và icon */
+    gap: 8px;
 }
 
 .btn:hover {
@@ -65,7 +65,7 @@ header {
 }
 
 .btn svg {
-    font-size: 1.2rem; /* Điều chỉnh kích thước icon */
+    font-size: 1.2rem;
 }
 
 

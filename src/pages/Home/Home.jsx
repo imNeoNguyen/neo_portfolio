@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./Home.css";
-import HeaderImage from "../../assets/avt_neo2.jpeg";
+import HeaderImage from "../../assets/avts/avt_neo2.png";
 
 // FontAwesome Import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
