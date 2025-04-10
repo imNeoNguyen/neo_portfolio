@@ -3,7 +3,14 @@ import { useState } from "react";
 import HeadingText from "../../components/HeadingText/HeadingText";
 import { portfolio2023, portfolio2024 } from "../../data/Data";
 import { motion, AnimatePresence } from "framer-motion";
-import Card from '../../UI/Card';
+import Card from "../../UI/Card";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faAppStore,
+  faGooglePlay,
+} from "@fortawesome/free-brands-svg-icons";
+import { faVideo, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 export default function Portfolio() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -16,16 +23,22 @@ export default function Portfolio() {
       <HeadingText title="Recent" titlePrimary="Work" />
 
       {/* Projects of 2024 */}
-      <h2 className="portfolio-year">Dự án năm 2024 - 2025</h2>
+      <h2 className="portfolio-year">Projects 2024 - 2025</h2>
       <div className="portfolio-container">
         {portfolio2024.map((project) => (
           <Card key={project.id} className="project-card">
             <motion.div className="project" whileHover={{ scale: 1.05 }}>
-              <img src={project.img} alt={project.name} className="project-img" />
+              <img
+                src={project.img}
+                alt={project.name}
+                className="project-img"
+              />
               <div className="p-4">
                 <h3>{project.name}</h3>
                 <p className="text-gray-600 mt-2">{project.des}</p>
-                <button className="btn" onClick={() => openModal(project)}>Detail</button>
+                <button className="btn" onClick={() => openModal(project)}>
+                  Details
+                </button>
               </div>
             </motion.div>
           </Card>
@@ -33,23 +46,28 @@ export default function Portfolio() {
       </div>
 
       {/* Projects of 2023 */}
-      <h2 className="portfolio-year">Dự án năm 2023</h2>
+      <h2 className="portfolio-year">Projects 2023</h2>
       <div className="portfolio-container">
         {portfolio2023.map((project) => (
           <Card key={project.id} className="project-card">
             <motion.div className="project" whileHover={{ scale: 1.05 }}>
-              <img src={project.img} alt={project.name} className="project-img" />
+              <img
+                src={project.img}
+                alt={project.name}
+                className="project-img"
+              />
               <div className="p-4">
                 <h3>{project.name}</h3>
                 <p className="text-gray-600 mt-2">{project.des}</p>
-                <button className="btn" onClick={() => openModal(project)}>Detail</button>
+                <button className="btn" onClick={() => openModal(project)}>
+                  Details
+                </button>
               </div>
             </motion.div>
           </Card>
         ))}
       </div>
 
-      {/* Modal chi tiết dự án */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
@@ -66,17 +84,78 @@ export default function Portfolio() {
               exit={{ scale: 0.9 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <span className="close-btn" onClick={closeModal}>&times;</span>
+              <img
+                src={selectedProject.img}
+                alt={selectedProject.name}
+                className="modal-img"
+              />
+
               <h2>{selectedProject.name}</h2>
-              <p><strong>Team size:</strong> {selectedProject.teamSize}</p>
-              <p><strong>Vị trí:</strong> Mobile Developer</p>
-              <p><strong>Tools:</strong> {selectedProject.tools}</p>
-              <p><strong>Tính năng:</strong> {selectedProject.features}</p>
-              <div className="flex gap-4 mt-4">
-                {selectedProject.github && <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">🔗 GitHub</a>}
-                {selectedProject.appstore && <a href={selectedProject.appstore} target="_blank" rel="noopener noreferrer">📱 App Store</a>}
-                {selectedProject.googleplay && <a href={selectedProject.googleplay} target="_blank" rel="noopener noreferrer">📱 Google Play</a>}
-                {selectedProject.demo && <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer">🎥 Demo</a>}
+              <p>
+                <strong>Team size:</strong> {selectedProject.teamSize}
+              </p>
+              <p>
+                <strong>Position:</strong> {selectedProject.position}
+              </p>
+              <p>
+                <strong>Tools:</strong> {selectedProject.tools}
+              </p>
+              <p>
+                <strong>Features:</strong> {selectedProject.features}
+              </p>
+
+              <div className="project-links">
+                {selectedProject.github && (
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github"
+                  >
+                    <FontAwesomeIcon icon={faGithub} size="lg" /> GitHub
+                  </a>
+                )}
+                {selectedProject.appStore && (
+                  <a
+                    href={selectedProject.appStore}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="appstore"
+                  >
+                    <FontAwesomeIcon icon={faAppStore} size="lg" /> App Store
+                  </a>
+                )}
+                {selectedProject.playStore && (
+                  <a
+                    href={selectedProject.playStore}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playstore"
+                  >
+                    <FontAwesomeIcon icon={faGooglePlay} size="lg" /> Google
+                    Play
+                  </a>
+                )}
+                {selectedProject.demo && (
+                  <a
+                    href={selectedProject.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="demo"
+                  >
+                    <FontAwesomeIcon icon={faVideo} size="lg" /> Demo
+                  </a>
+                )}
+                {selectedProject.website && (
+                  <a
+                    href={selectedProject.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="website"
+                  >
+                    <FontAwesomeIcon icon={faGlobe} size="lg" /> Website
+                  </a>
+                )}
               </div>
             </motion.div>
           </motion.div>
