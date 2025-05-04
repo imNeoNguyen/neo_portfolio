@@ -70,6 +70,8 @@ export default function Home() {
               <FontAwesomeIcon icon={["fab", "facebook"]} />
             </a>
           </span> */}
+
+          
           </p>
           <Link className="btn" to={"/about"}>
             About Me <FontAwesomeIcon icon={faArrowRight} />
