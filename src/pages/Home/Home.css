@@ -68,6 +68,17 @@ header {
     font-size: 1.2rem;
 }
 
+.social-icons a {
+    margin: 0 8px;
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: var(--color-primary);
+  }
+  
 
 /* ------------------ MAX-WIDTH : 768px ---------------- */
 @media (max-width: 768px) {

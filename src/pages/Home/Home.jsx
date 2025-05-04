@@ -12,6 +12,11 @@ import { Link } from "react-router-dom";
 // Import thư viện đánh máy
 import { TypeAnimation } from "react-type-animation";
 
+import { faLinkedin, faGithub, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faLinkedin, faGithub, faFacebook);
+
 export default function Home() {
   return (
     <header>
@@ -41,6 +46,30 @@ export default function Home() {
             <br />
             You can contact me via email{" "}
             <strong>imneoneonguyen@gmail.com</strong>
+          {/* <br />
+          <span className="social-icons">
+            <a
+              href="https://www.linkedin.com/in/your-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={["fab", "linkedin"]} />
+            </a>
+            <a
+              href="https://github.com/your-github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={["fab", "github"]} />
+            </a>
+            <a
+              href="https://facebook.com/your-facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={["fab", "facebook"]} />
+            </a>
+          </span> */}
           </p>
           <Link className="btn" to={"/about"}>
             About Me <FontAwesomeIcon icon={faArrowRight} />

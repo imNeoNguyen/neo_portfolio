@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./About.css";
-import CV from "../../assets/CV-NguyenThiKimNgan-InternDeveloper.pdf";
+import CV from "../../assets/CV_NguyenThiKimNgan_MobileDev.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faBriefcase, faProjectDiagram, faUsers } from "@fortawesome/free-solid-svg-icons";
 import HeadingText from "../../components/HeadingText/HeadingText";
